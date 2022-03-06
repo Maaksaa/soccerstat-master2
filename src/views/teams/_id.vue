@@ -9,12 +9,12 @@
         :thirdLink="team.name ? team.name : 'Team page'"
         :thirdLinkRoute="`/teams/${$route.params.id}`"
       />
-      <Loader v-if="loading === true" />
+      <Loader v-if="loading" />
       <template v-else>
         <h1 class="title">{{ team.name }}</h1>
 
         <section class="section">
-          <h3>About</h3>
+          <h3>О команде</h3>
           <b-card class="about-block about-block--team" v-if="team">
             <img
               class="about-block__img"
@@ -24,11 +24,11 @@
             />
             <div class="about-block__content">
               <p class="about-block__row">
-                <span class="about-block__title">Place:</span>
+                <span class="about-block__title">Место:</span>
                 {{ team.area.name }}
               </p>
               <p class="about-block__row">
-                <span class="about-block__title">Website: </span>
+                <span class="about-block__title">Сайт: </span>
                 <a
                   class="d-inline-block"
                   target="_blank"
@@ -41,7 +41,7 @@
         </section>
 
         <section class="section">
-          <h3>Matches</h3>
+          <h3>Матчи</h3>
           <FilterComponent @updError="updError" @updMatches="updMatches" />
           <MatchList :matches="matches" :team="team" :error="error" />
         </section>
@@ -60,7 +60,7 @@ export default {
   components: { Loader, MatchList, Breadcrumbs, FilterComponent },
   data() {
     return {
-      loading: null,
+      loading: false,
       matches: [],
       team: "",
       error: null,

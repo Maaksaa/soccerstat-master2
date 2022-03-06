@@ -2,16 +2,16 @@
   <div class="hamburger-menu" :class="{ active: isHamburgerActive }">
     <ul class="hamburger-menu__list">
       <li class="hamburger-menu__item" @click.prevent="toggleHamburger()">
-        <router-link to="/" class="hamburger-menu__link">Home</router-link>
+        <router-link to="/" class="hamburger-menu__link">Домой</router-link>
       </li>
       <li class="hamburger-menu__item" @click.prevent="toggleHamburger()">
         <router-link to="/competitions" class="hamburger-menu__link"
-          >Competitions</router-link
+          >Лиги</router-link
         >
       </li>
       <li class="hamburger-menu__item" @click.prevent="toggleHamburger()">
         <router-link to="/teams" class="hamburger-menu__link"
-          >Teams</router-link
+          >Команды</router-link
         >
       </li>
     </ul>

@@ -3,11 +3,11 @@
     <div class="container home__container">
       <ul class="home__routes">
         <li class="home__route">
-          <router-link to="/teams" class="home__link">Teams</router-link>
+          <router-link to="/teams" class="home__link">Команды</router-link>
         </li>
         <li class="home__route">
           <router-link to="/competitions" class="home__link"
-            >Competitions</router-link
+            >Лиги</router-link
           >
         </li>
       </ul>

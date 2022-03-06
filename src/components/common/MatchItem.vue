@@ -10,11 +10,11 @@
   >
     <div class="match-item__header">
       <div class="match-item__date">
-        <span>Date</span>
+        <span>Дата</span>
         {{ item.utcDate.slice(0, 10).split("-").reverse().join(".") }}
       </div>
       <div class="match-item__winner" v-if="item.score.winner">
-        <span>Winner</span>
+        <span>Победители</span>
         {{
           item.score.winner === "DRAW"
             ? "Draw"
@@ -32,7 +32,7 @@
     <div class="match-item__body">
       <div class="match-item__team">
         <p class="match-item__team-name">{{ item.homeTeam.name }}</p>
-        <p class="match-item__team-type">Home team</p>
+        <p class="match-item__team-type">Домашняя команда</p>
       </div>
       <div class="match-item__score">
         <template v-if="item.status === 'FINISHED'">

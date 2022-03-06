@@ -7,13 +7,12 @@
         :secondLink="'Competitions'"
         :secondLinkRoute="'/competitions'"
       />
-      <Loader v-if="loading === true" />
+      <Loader v-if="loading" />
       <template v-else>
         <section class="section">
-          <h1 class="title">Competitions</h1>
+          <h1 class="title">Лиги</h1>
           <p class="note">
-            * The number of competitions is limited due to the free plan
-            subscription.
+           Введите название Лиги
           </p>
           <SearchComponent :items="competitions" @showFiltered="showFiltered" />
           <ul
@@ -49,7 +48,7 @@
               </b-card>
             </li>
           </ul>
-          <b-alert show variant="warning" v-else>Not found.</b-alert>
+          <b-alert show variant="warning" v-else>Не найдено.</b-alert>
         </section>
       </template>
     </div>
@@ -67,7 +66,7 @@ export default {
     return {
       competitions: [],
       filteredCompetitions: [],
-      loading: null,
+      loading: false,
     };
   },
   methods: {

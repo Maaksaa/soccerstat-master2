@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="footer__author">
-        Contact me:
+        Мои контакты:
         <a
           href="https://github.com/Maaksaa"
           target="_blank"

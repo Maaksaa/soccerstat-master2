@@ -7,12 +7,12 @@
         :secondLink="'Teams'"
         :secondLinkRoute="'/teams'"
       />
-      <Loader v-if="loading === true" />
+      <Loader v-if="loading" />
       <template v-else>
         <section class="section">
-          <h1 class="title">Teams</h1>
+          <h1 class="title">Команды</h1>
           <p class="note">
-            * The number of teams is limited due to the free plan subscription.
+            * Количество команд ограниченно из-за бесплатной подписки
           </p>
           <SearchComponent :items="teams" @showFiltered="showFiltered" />
           <ul
@@ -38,7 +38,7 @@
             </li>
           </ul>
 
-          <b-alert show variant="warning" v-else>Not found.</b-alert>
+          <b-alert show variant="warning" v-else>Не найдено.</b-alert>
         </section>
       </template>
     </div>
@@ -56,7 +56,7 @@ export default {
     return {
       teams: "",
       filteredTeams: "",
-      loading: null,
+      loading: false,
     };
   },
   methods: {

@@ -30,7 +30,7 @@
       <button class="btn" @click="showNext">></button>
     </div>
   </div>
-  <b-alert show variant="warning" v-else>Not found.</b-alert>
+  <b-alert show variant="warning" v-else>Не найдено.</b-alert>
 </template>
 
 <script>

@@ -8,16 +8,14 @@
     v-model="isShown"
   >
     <p class="modal__desc">
-      A network error occurred. This could be caused by too many requests, a
-      CORS issue or a dropped internet connection. Please try to reload the page
-      or go to the main page.
+      Много запросов, пожалуйста перезагрузите страницу. 
     </p>
     <template #modal-footer>
       <div class="modal__footer">
         <b-row>
           <b-col>
             <b-button class="modal__btn" variant="success" @click="reload()">
-              Reload
+              Перезагрузить
             </b-button>
           </b-col>
           <b-col>
@@ -26,7 +24,7 @@
               variant="secondary"
               @click="goToMain()"
             >
-              To the main page
+              На главную страницу
             </b-button>
           </b-col>
         </b-row>

@@ -3,7 +3,7 @@
     <ul class="nav__list">
       <li class="nav__item">
         <router-link to="/" exact class="nav__link" data-content="Home"
-          >Home</router-link
+          >Домой</router-link
         >
       </li>
       <li class="nav__item">
@@ -11,12 +11,12 @@
           to="/competitions"
           class="nav__link"
           data-content="Competitions"
-          >Competitions</router-link
+          >Лиги</router-link
         >
       </li>
       <li class="nav__item">
         <router-link to="/teams" class="nav__link" data-content="Teams"
-          >Teams</router-link
+          >Команды</router-link
         >
       </li>
     </ul>

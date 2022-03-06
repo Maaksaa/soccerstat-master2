@@ -14,7 +14,7 @@
               class="search-component__btn"
               type="submit"
               variant="success"
-              >Search</b-button
+              >Поиск</b-button
             >
           </b-input-group-append>
         </b-input-group>

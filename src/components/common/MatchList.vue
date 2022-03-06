@@ -9,7 +9,7 @@
       />
     </ul>
     <b-alert show variant="warning" v-if="paginatedData.length === 0 && !error"
-      >Not found.</b-alert
+      >Не найдено.</b-alert
     >
     <b-alert show variant="danger" v-if="error">{{ error }}</b-alert>
     <pagination

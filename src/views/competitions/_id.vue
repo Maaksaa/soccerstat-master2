@@ -9,7 +9,7 @@
         :thirdLink="competition.name ? competition.name : 'Competition page'"
         :thirdLinkRoute="`/competitions/${$route.params.id}`"
       />
-      <Loader v-if="loading === true" />
+      <Loader v-if="loading" />
       <template v-else>
         <h1 class="title" v-if="competition">{{ competition.name }}</h1>
 
@@ -31,13 +31,13 @@
 
         <template v-if="teams && teams.length > 0">
           <section class="section">
-            <h3>Teams</h3>
+            <h3>Команды</h3>
             <TeamsSlider :teams="teams" :competitionPage="true" />
           </section>
         </template>
 
         <section class="section">
-          <h3>Matches</h3>
+          <h3>Матчи</h3>
           <FilterComponent @updError="updError" @updMatches="updMatches" />
           <MatchList :matches="matches" :error="error" />
         </section>
@@ -60,7 +60,7 @@ export default {
       competition: "",
       matches: [],
       teams: [],
-      loading: null,
+      loading: false,
       error: null,
     };
   },
