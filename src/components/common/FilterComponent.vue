@@ -18,7 +18,7 @@
           <b-form-group label="Status" label-for="status">
             <div class="form-group__wrapper">
               <select class="custom-input" id="status" v-model="filter.status">
-                <option :value="null" disabled>Select a status</option>
+                <option :value="null" disabled>Выберите статус</option>
                 <option
                   :value="status"
                   v-for="status in statuses"
@@ -31,7 +31,7 @@
                 v-show="filter.status !== null"
                 variant="danger"
                 @click.prevent="filter.status = null"
-                >Remove</b-button
+                >Удалить</b-button
               >
             </div>
           </b-form-group>
@@ -40,7 +40,7 @@
           <b-form-group label="Season" label-for="year">
             <div class="form-group__wrapper">
               <select class="custom-input" id="year" v-model="filter.season">
-                <option :value="null" disabled>Select a year</option>
+                <option :value="null" disabled>Выберите год</option>
                 <option :value="year" v-for="year in years" :key="year.id">
                   {{ year }}
                 </option>
@@ -49,7 +49,7 @@
                 v-show="filter.season !== null"
                 variant="danger"
                 @click.prevent="filter.season = null"
-                >Remove</b-button
+                >Удалить</b-button
               >
             </div>
           </b-form-group>
